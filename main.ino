@@ -35,9 +35,7 @@ void setup() {
   update_servo_angle(3, 1, 68);
   update_servo_angle(3, 2, 90);
  
-  for (int i = 0; i < SIZE; i++) {
-    dist[i] = 99;
-  }
+  reset();
 }
  
 void scanning(void) {
@@ -125,8 +123,16 @@ void fire(void) {
   update_servo_angle(3, 2, 90);
   update_servo_angle(3, 1, 68);
   delay(500);
-  currentState = SCANNING;
+  currentState = RESETTING;
   return;
+}
+
+void reset(void){
+  for(int i = 0; i < SIZE; i++){
+    dist[i] = 99;
+  }
+  minIndex = 0;
+  currentState = SCANNING;
 }
  
 void loop() {
@@ -147,7 +153,12 @@ void loop() {
       Serial.println("FIRING");
       fire();
       break;
+    case RESETTING:
+      Serial.println("RESETTING");
+      reset();
+      break;
     default:
       currentState = SCANNING;
       break;
   }
+}
