@@ -134,7 +134,7 @@ void fire(void) {
 
 void loop() {
   // 最初の2秒は距離センサーの初期化を待つ
-  bool sensorReady = false;
+  static bool sensorReady = false;
   if (!sensorReady) {
     if (millis() - startTime > 2000) {
       sensorReady = true;
