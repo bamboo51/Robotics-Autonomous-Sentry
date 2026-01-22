@@ -19,7 +19,6 @@ State currentState = SCANNING;
 int currentDistance = 100;
 
 unsigned long lastScanTime = 0;
-unsigned long lastFireTime = 0;
 
 volatile int buzzerInterval = 0; 
 volatile bool buzzerState = false;
