@@ -11,7 +11,7 @@ The turret's behavior is controlled by a state machine with four distinct states
 2. SCANNING
 - Purpose: To search for potential targets within its field of view.
 - Behavior:
-The stepper motor moves the turret horizontally, panning back and forth across a 165-degree arc (defined by SIZE and step angles).
+The stepper motor moves the turret horizontally, panning back and forth across a 180-degree arc (defined by SIZE and step angles).
 The ultrasonic sensor measures the distance every 100ms.
 If a target is detected closer than TRACKED_DISTANCE (35mm), the state machine transitions to TRACKING.
 A buzzer beeps every second to indicate the system is active and searching.
@@ -47,7 +47,7 @@ Finally, the turret returns to the default position and transitions back to the 
 ### 2. `SCANNING` (探索)
 *   **目的:** 視界内に潜在的なターゲットを探索します。
 *   **動作:**
-    *   ステッピングモーターがタレットを水平方向に動かし、165度の範囲を往復します（この範囲は`SIZE`とステップ角度によって定義されます）。
+    *   ステッピングモーターがタレットを水平方向に動かし、180度の範囲を往復します（この範囲は`SIZE`とステップ角度によって定義されます）。
     *   超音波センサーが100ミリ秒ごとに距離を測定します。
     *   もし`TRACKED_DISTANCE`（35mm）より近くでターゲットが検出されると、ステートマシンは`TRACKING`状態に移行します。
     *   システムが稼働中で探索中であることを示すため、ブザーが1秒ごとに鳴ります。
