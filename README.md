@@ -1,8 +1,6 @@
 # Robotics-Autonomous-Sentry
 
-
-https://github.com/user-attachments/assets/35502f4e-affd-403e-b08c-51b8fa3b5d7f
-
+https://github.com/user-attachments/assets/ca228696-b430-4e73-8bed-09cd1e77284c
 
 This is a source code for robot made in KOSEN's robotic class. This project implements as autonomous sentry gun using mDrawbot Kit (Makeblock Orion board). The system uses an ultrasonic sensor to detect intruders, a stepper motot to scan a desginated area, and servo motors to aim and "fire". The operation is managed by state machine (`STARTUP`, `SCANNING`, '`TRACKING`, `FIRING`). The last source code we used in this project is <a href="./last_fix.ino">last_fix.ino</a>\
 日本語の説明は下にあります。
